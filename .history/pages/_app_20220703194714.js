@@ -4,7 +4,7 @@ import Spline from "@splinetool/react-spline";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Spline scene="https://prod.spline.design/TRfTj83xgjIdHPmT/scene.spline" />
+      <Spline scene="https://prod.spline.design/xqj0cPqjGfnChROo/scene.splinecode" />
       <Component {...pageProps} />
     </>
   );
