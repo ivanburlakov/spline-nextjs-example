@@ -36,7 +36,7 @@ function MyApp() {
 
   useEffect(() => {
     function scaleSpline() {
-      if (cube.current?.scale) {
+      if (cube.current.scale) {
         const scaleValue = getScaleValue();
         setSplineScale(scaleValue / initialZoom);
       }

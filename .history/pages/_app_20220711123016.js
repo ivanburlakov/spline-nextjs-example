@@ -36,7 +36,7 @@ function MyApp() {
 
   useEffect(() => {
     function scaleSpline() {
-      if (cube.current?.scale) {
+      if (cube.current.scale) {
         const scaleValue = getScaleValue();
         setSplineScale(scaleValue / initialZoom);
       }
@@ -46,13 +46,13 @@ function MyApp() {
   }, [initialZoom]);
 
   return (
-    <div className="cube-container">
+    <>
       <Spline
         onLoad={onLoad}
         className="cube"
         scene="https://prod.spline.design/TRfTj83xgjIdHPmT/scene.spline"
       />
-    </div>
+    </>
   );
 }
 

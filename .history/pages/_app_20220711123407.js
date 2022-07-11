@@ -3,7 +3,7 @@ import Spline from "@splinetool/react-spline";
 import "../styles/globals.css";
 
 function MyApp() {
-  let initialZoom;
+  let initialZoom = 0.5;
   const cube = useRef();
 
   function getScaleValue() {
@@ -36,7 +36,7 @@ function MyApp() {
 
   useEffect(() => {
     function scaleSpline() {
-      if (cube.current?.scale) {
+      if (cube.current.scale) {
         const scaleValue = getScaleValue();
         setSplineScale(scaleValue / initialZoom);
       }
@@ -46,13 +46,13 @@ function MyApp() {
   }, [initialZoom]);
 
   return (
-    <div className="cube-container">
+    <>
       <Spline
         onLoad={onLoad}
         className="cube"
-        scene="https://prod.spline.design/TRfTj83xgjIdHPmT/scene.spline"
+        scene="https://prod.spline.design/MSMlPXen4NSHTl71/scene.splinecode"
       />
-    </div>
+    </>
   );
 }
 
